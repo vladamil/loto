@@ -1,7 +1,11 @@
 const button = document.querySelector('.btn');
 const numbers = document.querySelector('.numbers-container');
+const message = document.querySelector('.message');
 
-// Get random numbers 7-39
+// timer for message display
+let timer;
+
+// Get random numbers 1-39
 function getNumbers() {
    const nums = new Set();
 
@@ -28,6 +32,13 @@ function displayNumbers(nums) {
 
 button.addEventListener('click', () => {
    numbers.innerHTML = '';
+   message.style.display = 'none';
+   clearTimeout(timer);
+
    const numbersArr = getNumbers();
    displayNumbers(numbersArr);
+
+   timer = setTimeout(() => {
+      message.style.display = 'block';
+   }, 1000 * numbersArr.length);
 });

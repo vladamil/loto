@@ -5,6 +5,7 @@
    padding: 0;
    box-sizing: border-box;
 }
+
 main {
    height: 100vh;
    background-color: rgb(21, 21, 21);
@@ -33,7 +34,7 @@ img.logo {
 .btn {
    display: block;
    margin: auto;
-   font-size: 30px;
+   font-size: 25px;
    font-family: inherit;
    padding: 10px;
    border: none;
@@ -78,11 +79,12 @@ img.logo {
 }
 
 .message {
+   display: none;
+   margin-top: 60px;
    text-align: center;
 }
 
 .message-text {
-   margin-top: 60px;
    padding: 0 10px;
    color: white;
    font-size: 35px;
