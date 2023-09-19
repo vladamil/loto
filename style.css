@@ -14,11 +14,11 @@ main {
 }
 
 .container {
-   width: 800px;
+   width: 100%;
+   max-width: 800px;
    margin: auto;
    text-align: center;
-   padding-top: 100px;
-   overflow: hidden;
+   padding: 100px 10px;
 }
 
 h1 {
@@ -27,7 +27,8 @@ h1 {
 }
 
 img.logo {
-   width: 600px;
+   width: 100%;
+   max-width: 600px;
    margin-bottom: 50px;
 }
 
@@ -53,6 +54,7 @@ img.logo {
    display: flex;
    align-items: center;
    justify-content: space-evenly;
+   flex-wrap: wrap;
 }
 
 .number-field {
@@ -93,4 +95,32 @@ img.logo {
 
 .tref {
    width: 25px;
+}
+
+/* --------------- MEDIA QUERIES ------------------ */
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+   img.logo {
+      max-width: 350px;
+   }
+
+   .number-field {
+      height: 50px;
+      width: 50px;
+      font-size: 35px;
+   }
+}
+
+/* TABLET */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+   img.logo {
+      max-width: 500px;
+   }
+
+   .number-field {
+      height: 75px;
+      width: 75px;
+      font-size: 50px;
+   }
 }
