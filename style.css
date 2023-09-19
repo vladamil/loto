@@ -67,7 +67,7 @@ img.logo {
    justify-content: center;
    opacity: 0;
    font-size: 70px;
-   font-weight: 600;
+   font-weight: 400;
    animation: draw 1s ease-in forwards;
 }
 
@@ -101,14 +101,26 @@ img.logo {
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
+   main {
+      overflow: auto;
+   }
+
+   .container {
+      padding: 20px 10px;
+   }
+
    img.logo {
       max-width: 350px;
    }
 
+   .numbers-container {
+      height: 60px;
+   }
+
    .number-field {
-      height: 50px;
-      width: 50px;
-      font-size: 35px;
+      height: 40px;
+      width: 40px;
+      font-size: 25px;
    }
 }
 
